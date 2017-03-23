@@ -29,7 +29,8 @@ import sys
 from urllib.request import urlopen
 
 
-system = sys.argv[0]
+# http://icarus.cs.weber.edu/~hvalle/cs3030/data/error.log.test
+
 
 def help():
     """
@@ -39,10 +40,15 @@ def help():
 
 
 def test_arg():
-    #url = sys.argv[1]
-    
-    if isset(sys.argv[1]):
+    if len(sys.argv) > 1:
+            url = sys.argv[1]
+            return url
+    else:
         help()
+    
+def get_url():
+    urlopen(url)
+    
 
 
 #Main Function
@@ -50,10 +56,8 @@ def main():
     """
     Test Function
     """
-    #url = sys.argv[1]
-    #print(url)
     test_arg()
-
+    get_url(url)
 
 
 if __name__=="__main__":
