@@ -29,12 +29,20 @@ import sys
 from urllib.request import urlopen
 
 
+system = sys.argv[0]
+
+def help():
+    """
+    Help function
+    """
+    print("Usage is: " + sys.argv[0] + " <file Input>")
 
 
-
-
-
-
+def test_arg():
+    #url = sys.argv[1]
+    
+    if isset(sys.argv[1]):
+        help()
 
 
 #Main Function
@@ -42,6 +50,9 @@ def main():
     """
     Test Function
     """
+    #url = sys.argv[1]
+    #print(url)
+    test_arg()
 
 
 
