@@ -37,7 +37,7 @@ def help():
     Help function
     """
     print("Usage is: " + sys.argv[0] + " <file Input>")
-
+    exit(1)
 
 def test_arg():
     if len(sys.argv) > 1:
@@ -46,17 +46,18 @@ def test_arg():
     else:
         help()
     
-def get_url():
-    urlopen(url)
-    
-
+def get_words(url):
+    #urlopen(url)
+    with urlopen(url) as lines: 
+        story_words = []
 
 #Main Function
 def main():
     """
     Test Function
     """
-    test_arg()
+    url = test_arg()
+    print(url)
     get_url(url)
 
 
