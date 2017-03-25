@@ -27,8 +27,9 @@
 
 import sys
 from urllib.request import urlopen
+import re
 
-
+from collections import Counter
 # http://icarus.cs.weber.edu/~hvalle/cs3030/data/error.log.test
 
 
@@ -40,6 +41,11 @@ def help():
     exit(1)
 
 def test_arg():
+    """
+    Test if arguments was entered into cmd
+    if there is a file continue
+    if not use help()
+    """
     if len(sys.argv) > 1:
             url = sys.argv[1]
             return url
@@ -48,8 +54,32 @@ def test_arg():
     
 def get_words(url):
     #urlopen(url)
-    with urlopen(url) as lines: 
-        story_words = []
+    with urlopen(url) as log_file: 
+        for line in log_file:
+            readable_log = line.decode('utf-8')
+            #print(readable_log)
+
+    errors = []
+    for line in readable_log:
+        m1 = re.match(r"^.* '(/.*)'.*$", line)
+        m2 = re.match(r"^.* (/.*):.*,.*$", line)
+        m3 = re.match(r"^.* (/.*), .*$", line)
+        m4 = re.match(r"^.*: (/.*)$", line)
+        if m1:
+            errors.append(str(m1.group(1)))
+        elif m2:
+            errors.append(str(m2.group(1)))
+        elif m3:
+            errors.append(str(m3.group(1)))
+        elif m4:
+            rrors.append(str(m4.group(1)))
+    
+    topErrs = Counter(errors).most_common(25)                       
+    print ("*** Top 25 page errors ***")                
+    for x in topErrs:
+        print("Count: " + str(x[1]) + "\tPage: " + x[0])
+
+
 
 #Main Function
 def main():
@@ -57,8 +87,8 @@ def main():
     Test Function
     """
     url = test_arg()
-    print(url)
-    get_url(url)
+    #print(url)
+    get_words(url)
 
 
 if __name__=="__main__":
