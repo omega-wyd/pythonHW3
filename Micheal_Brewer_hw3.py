@@ -55,8 +55,9 @@ def test_arg():
 def get_words(url):
     #urlopen(url)
     with urlopen(url) as log_file: 
+        readable_log = []
         for line in log_file:
-            readable_log = line.decode('utf-8')
+            readable_log.append(line.decode('utf-8'))
             #print(readable_log)
 
     errors = []
@@ -72,8 +73,7 @@ def get_words(url):
         elif m3:
             errors.append(str(m3.group(1)))
         elif m4:
-            rrors.append(str(m4.group(1)))
-    
+            errors.append(str(m4.group(1)))
     topErrs = Counter(errors).most_common(25)                       
     print ("*** Top 25 page errors ***")                
     for x in topErrs:
