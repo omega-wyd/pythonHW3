@@ -2,27 +2,26 @@ Micheal_Brewer_Hw3
 
 Homework Assignment 3 Python Authors: Micheal Brewer CS 3030 – Hugo Valle
 
-The purpose of this script Micheal_Brewer_Hw3.py is to replicate how an ATM accepts a user input of their pin and verifies that it meets the requirments of 1) being only numbers, 2) is 4 characters long, 3) macthes the rtequired pin.
+THe putpose of this script is to import a file from a website, in this case a log file. The script when then sort through the file and identify the top 25 errors and return a list of the errors and how many times they occurred. 
 
 Script usage
 
-Micheal_Brewer_Hw2.py
+Micheal_Brewer_Hw3.py
 
-	$ python3 Micheal_Brewer_Hw2.py
+	$ python3 Micheal_Brewer_Hw3.py
 	or
-	./Micheal_Brewer_Hw2.py
+	./Micheal_Brewer_Hw3.py
+
 What each defenition does
 
-pin is set to userinput
 
-The check() def takes the argument of pin. It will test right off if the pin equals the hardcoded pin of 1234.
+The help() demonstrates how the script is used. 
 
-The length() def takes the argument of pin. It checks to see if the pin is 4 characters long. If not it prints (" Invalid PIN lenth. Correct format is: <9876>").
+The test_arg() checks to see that an argument (sys.argv[1]) was put into the command. If so it will pass the the file info back to worked with. If not it will call the help().
 
-The num() def takes the argument of pin. It checks to see if pin is all numeric characters. If not it prints (" Invalid PIN character. Correct format is: <9876>").
-
-The getInput() def takes the argument pin. It runs a whie loop thatasks the user to input a pin and only allow 3 attempts to enter the correct pin. It calls defs check(), length(), and num() in the loop to check each of the user's inputs.
-
+The get_wrds() takes the argument url and decodes the file into readable text. It then creates the list errors[] and runs through each line in the file with a for loop which searches for four different critirias to match. if there are any matches the error path is appended to errors[].
+It will then count the errors and the most common ones and list them into a viewable list displaying the top 25 errors and how many times they occured. 
+	
+The main() creates the url variable after calling test_arg() and getting the returned cile. It then passes the file to get_words().
 attempts is set to 0 and increments to 3.
 
-The main() def calls the getInput() to start the process.
