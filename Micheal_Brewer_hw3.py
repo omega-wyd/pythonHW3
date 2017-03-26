@@ -53,6 +53,12 @@ def test_arg():
         help()
     
 def get_words(url):
+    """
+    Takes the file inputed by user and decodes it to utf-8
+    Then goes through each line of the file and matches to 4 critiria types.
+    it then saves the found matches to a list which is then counted.
+    Returns print of top 25 errors found and how many times occured. 
+    """
     #urlopen(url)
     with urlopen(url) as log_file: 
         readable_log = []
