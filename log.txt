@@ -1,0 +1,53 @@
+commit a9917b254ed921fff9f450608a1c9381313486bf
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Sat Mar 25 20:23:22 2017 -0600
+
+    all doc stings added.
+
+commit 0c79450357c2054f56ef813cf2ad481bd04de0a0
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Sat Mar 25 20:17:13 2017 -0600
+
+    README file filled out.
+
+commit b80978fe11ae9720e096bdd6f68f6eaa6ac5ddfc
+Author: omega-wyd <mbrewerramirez@mail.weber.edu>
+Date:   Sat Mar 25 20:04:30 2017 -0600
+
+    Create README.md
+
+commit f8d24df1920321e220cfad6fecf0a99ec8ddb7dd
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Fri Mar 24 19:19:54 2017 -0600
+
+    done
+
+commit d77828570971859fd9c4f9f2a6281ac66a77b5af
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Fri Mar 24 18:43:58 2017 -0600
+
+    added most of it
+
+commit 527b5e8b434b7986250e002ebc6b1115223fb43e
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Fri Mar 24 18:14:12 2017 -0600
+
+    updated test_arg
+
+commit 7595eff8c37510fc7d2f3c721bd864b8c63c2669
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Thu Mar 23 13:14:21 2017 -0600
+
+    help funciton runs correctly
+
+commit 7819ede0929274afe9d59a7ea1cd22c6becd8b04
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Wed Mar 22 18:48:16 2017 -0600
+
+    aded help funciton
+
+commit 9b575a1e68de091cac52d48596da0da75458a73d
+Author: Micheal Brewer <mbrewerramirez@mail.weber.edu>
+Date:   Wed Mar 22 17:44:22 2017 -0600
+
+    started the assignment
